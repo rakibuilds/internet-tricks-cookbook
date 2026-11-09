@@ -1,0 +1,27 @@
+name: Verify Index Compilation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Run Index Validation
+      run: |
+        if [ -f scripts/build_index.py ]; then
+          python scripts/build_index.py
+        else
+          echo "Index build script not found, skipping."
+        fi

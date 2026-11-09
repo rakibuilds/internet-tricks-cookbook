@@ -1,0 +1,13 @@
+# Handle line endings automatically
+* text=auto
+
+# Explicitly mark text files for strict line ending normalization
+*.md text
+*.txt text
+*.py text
+*.js text
+*.sh text
+*.json text
+
+# Mark shell scripts as using Linux line endings to prevent execution errors
+*.sh text eol=lf

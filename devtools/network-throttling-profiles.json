@@ -1,10 +1,20 @@
 {
-  "_comment": "Approximate profiles for Chrome DevTools Protocol Network.emulateNetworkConditions (Puppeteer, Playwright). Throughput is in bytes per second, latency in milliseconds. Values are rough real-world approximations.",
+  "_purpose": "Network simulation presets to test low-bandwidth connections and edge speeds in browser tests.",
   "profiles": {
-    "offline":  { "offline": true,  "downloadThroughput": 0,       "uploadThroughput": 0,      "latency": 0 },
-    "slow-3g":  { "offline": false, "downloadThroughput": 64000,   "uploadThroughput": 51200,  "latency": 400 },
-    "fast-3g":  { "offline": false, "downloadThroughput": 187500,  "uploadThroughput": 93750,  "latency": 150 },
-    "slow-4g":  { "offline": false, "downloadThroughput": 400000,  "uploadThroughput": 150000, "latency": 100 },
-    "4g":       { "offline": false, "downloadThroughput": 1125000, "uploadThroughput": 187500, "latency": 85 }
+    "offline": {
+      "download": 0,
+      "upload": 0,
+      "latency": 0
+    },
+    "slow-3g": {
+      "download": 400000,
+      "upload": 400000,
+      "latency": 400
+    },
+    "fast-3g": {
+      "download": 1600000,
+      "upload": 768000,
+      "latency": 150
+    }
   }
 }

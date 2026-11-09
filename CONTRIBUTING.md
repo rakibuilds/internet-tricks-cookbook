@@ -9,6 +9,9 @@ This tree is generated automatically by `scripts/build_index.py`.
 <!-- TREE:START -->
 ```text
 internet-tricks-cookbook/
+|-- .github/
+|   `-- workflows/
+|       `-- index-check.yml
 |-- api-and-webhooks/
 |   |-- dynamic-dns-updater.py
 |   |-- README.md
@@ -112,6 +115,8 @@ internet-tricks-cookbook/
 |   |   |-- keyboard-shortcuts.md
 |   |   `-- playback-controls.md
 |   `-- README.md
+|-- .gitattributes
+|-- .gitignore
 |-- CONTRIBUTING.md
 |-- LICENSE
 |-- README.md
